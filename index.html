@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <title>CV Online</title>
+</head>
+
+<body>
+    <main>
+        <header>
+            <img src="https://randomuser.me/api/portraits/men/11.jpg" alt="joven castaño" id="foto-cv">
+            <h1 id="nombre-cv">Gavin Pena</h1>
+        </header>
+        <div id="contenido">
+            <aside>
+                <section id="contacto">
+                    <h3>Contacto</h3>
+                    <div id="formas-contacto">
+                        <i data-tipo="mail" class="fa-solid fa-envelope"></i>
+                        <i data-tipo="telefono" class="fa-solid fa-phone"></i>
+                        <i data-tipo="domicilio" class="fa-solid fa-house"></i>
+                    </div>
+                    <p id="dato-contacto">...</p>
+                </section>
+                <hr>
+                <h3>Idiomas</h3>
+                <ul>
+                    <li><b>Español:</b> nativo</li>
+                    <li><b>Inglés:</b> habla y escribe</li>
+                    <li><b>Francés:</b> básico</li>
+                </ul>
+            </aside>
+            <section id="datos">
+                <nav>
+                    <h2>Seleccione una categoría para ampliar detalles</h2>
+                    <button class="mobile" data-dato="basicos">Datos Básicos</button><button
+                        data-dato="educacion">Educación</button><button
+                        data-dato="habilidades">Habilidades</button><button data-dato="experiencia">Experiencia</button>
+                </nav>
+                <div data-dato="educacion" class="detalle-dato oculto">
+                    <small>2005</small>
+                    <p><b>Bachiller con orientación a Informática</b></p>
+                    <p><i>Colegio Invenfalso</i></p>
+                    <hr>
+                    <small>2011</small>
+                    <p><b>Ingeniería Informática</b></p>
+                    <small>Finalizado</small>
+                    <p><i>Universidad Alfabetagamma</i></p>
+                    <hr>
+                    <small>2011</small>
+                    <p><b>Tecnicatura en Diseño Gráfico</b></p>
+                    <small>En progreso</small>
+                    <p><i>Instituto Universo42</i></p>
+                </div>
+                <div data-dato="habilidades" class="detalle-dato oculto">
+                    <h3>Soft</h3>
+                    <ul>
+                        <li>Puntualidad</li>
+                        <li>Organización</li>
+                        <li>Creatividad</li>
+                        <li>Trabajo en Equipo</li>
+                        <li>Voluntad de Aprendizaje</li>
+                    </ul>
+                    <hr>
+                    <h3>Hard</h3>
+                    <ul>
+                        <li>Excel Avanzado</li>
+                        <li>Photoshop Intermedio</li>
+                        <li>CSS, HTML y JavaScript Intermedio</li>
+                    </ul>
+                </div>
+                <div data-dato="experiencia" class="detalle-dato oculto">
+                    <small>2007</small>
+                    <p><b>Reparación y Servicio Técnico de Celulares y PCs</b></p>
+                    <p>De forma autónoma, algunas de las tareas realizadas:</p>
+                    <ul>
+                        <li>Cambio de pantalla</li>
+                        <li>Limpieza de Virus</li>
+                        <li>Instalación de Programas</li>
+                        <li>Armado de Computadora</li>
+                    </ul>
+                    <hr>
+                    <small>2010-2011</small>
+                    <p><b>Trainee en Desarrollo Web</b></p>
+                    <p>Se realizaban tareas básicas como asistir a la corrección de bugs, documentación y páginas
+                        sencillas. </p>
+                    <p><i>Empresa PrograCamp</i></p>
+                    <hr>
+                    <small>2013</small>
+                    <p><b>Desarrollo Frontend Ssr</b></p>
+                    <p><i>Empresa LindasWeb</i></p>
+                    <hr>
+                </div>
+                <div data-dato="basicos" class="detalle-dato oculto mobile">
+                    <h3>Contacto</h3>
+                    <ul id="lista-contacto">
+                        <li><i data-tipo="mail" class="fa-solid fa-envelope"></i> gavin.pena@example.com</li>
+                        <li><i data-tipo="telefono" class="fa-solid fa-phone"></i> (218) 438-4198</li>
+                        <li><i data-tipo="domicilio" class="fa-solid fa-house"></i> 9174 Dogwood Ave</li>
+                    </ul>
+                    <hr>
+                    <h3>Idiomas</h3>
+                    <ul>
+                        <li>Español nativo</li>
+                        <li>Inglés habla y escribe</li>
+                        <li>Francés básico</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>Acuña Bravo Lara - Trabajo Final Ticmas Academy</p>
+    </footer>
+</body>
+<script src="script/main.js"></script>
+
+</html>

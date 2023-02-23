@@ -1,0 +1,281 @@
+:root {
+    font-family: Lato, 'Courier New', Courier;
+    /*Variables para vista Desktop*/
+    --main-width: 50%;
+    --header-height: 20%;
+    --header-flex-direction: row;
+    --nombre-cv-font-size: 2.5vw;
+    --datos-width: 75%;
+    --datos-font-size: 1vw;
+    --h2-font-size: 1.4vw;
+    --footer-font-size: 0.9vw;
+}
+
+@media (max-width: 767px) {
+
+    /*Vista Mobile*/
+    :root {
+        --main-width: 90%;
+        --header-height: 50vh;
+        --header-flex-direction: column-reverse;
+        --datos-width: 100%;
+    }
+
+    header {
+        justify-content: center;
+    }
+
+    #nombre-cv {
+        font-size: calc(var(--nombre-cv-font-size) * 4);
+        margin-bottom: 0.5em;
+    }
+
+    #foto-cv {
+        height: 30vh;
+    }
+
+    aside {
+        display: none;
+    }
+
+    #datos {
+        font-size: calc(var(--datos-font-size)*4);
+    }
+
+    h2 {
+        font-size: calc(var(--h2-font-size) * 4);
+    }
+
+    footer p {
+        font-size: calc(var(--footer-font-size) * 4);
+    }
+
+    nav button {
+        margin: 0.5em 1em;
+    }
+
+
+}
+
+@media (min-width: 768px) {
+
+    /*Vista Desktop*/
+    body {
+        max-height: 100vh;
+        height: 100vh;
+    }
+
+    #foto-cv {
+        height: 100%;
+        margin-left: 2%;
+    }
+
+    #nombre-cv {
+        margin-left: 5%;
+        font-size: var(--nombre-cv-font-size);
+    }
+
+    #contenido {
+        height: 80%;
+    }
+
+    #datos {
+        font-size: var(--datos-font-size);
+    }
+
+    h2 {
+        font-size: var(--h2-font-size);
+    }
+
+    nav {
+        height: 20%;
+    }
+
+    .detalle-dato {
+        height: 80%;
+        overflow-y: auto;
+    }
+
+    footer p {
+        font-size: var(--footer-font-size);
+    }
+
+    nav button {
+        margin: 0 1em;
+    }
+
+    .mobile {
+        display: none;
+    }
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    width: var(--main-width);
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    border-radius: 0.8em;
+    height: 100%;
+}
+
+body {
+    background-color: #172A3A;
+    padding: 2% 0;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #508991;
+    height: var(--header-height);
+    display: flex;
+    flex-direction: var(--header-flex-direction);
+    align-items: center;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+}
+
+#foto-cv {
+    border: 2px solid white;
+}
+
+#nombre-cv {
+    color: white;
+}
+
+#contenido {
+    display: flex;
+    flex-direction: row;
+    border-radius: inherit;
+}
+
+aside {
+    padding: 1em 1.5em;
+    width: 25%;
+    color: #001D1E;
+    background-color: #c5efef;
+    font-size: 0.9vw;
+    border-bottom-left-radius: inherit;
+    word-wrap: break-word;
+}
+
+aside hr {
+    margin: 1.5em 0;
+    height: 1px;
+    border: 0;
+    background-color: #001D1E;
+}
+
+aside ul {
+    list-style-type: none;
+}
+
+aside :is(h3, p, ul) {
+    margin: 0.75em 0;
+}
+
+#formas-contacto {
+    height: 2ch;
+}
+
+#formas-contacto i {
+    vertical-align: middle;
+    margin-left: calc(100% / 6);
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+#formas-contacto i:hover {
+    color: #0c4042;
+    font-size: 1.1vw;
+    margin-left: calc(100% / 6 - 0.2vw);
+}
+
+
+#datos {
+    width: var(--datos-width);
+    padding: 0.8em 1.4em;
+}
+
+#datos hr {
+    margin: 0.8em 0;
+}
+
+#datos ul {
+    margin: 1em 2em;
+}
+
+#datos :is(li, p) {
+    margin: 0 0 0.5em;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+}
+
+nav {
+    text-align: center;
+}
+
+nav button {
+    font-size: inherit;
+    padding: 0.8em 1.2em;
+    background-color: #172A3A;
+    color: white;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    border: 0;
+    border-radius: 0.8em;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+nav button:hover {
+    background-color: #508991;
+}
+
+nav button.presionado {
+    background-color: #c5efef;
+    color: #001D1E;
+    box-shadow: inset 2px 2px #508991;
+}
+
+#dato-contacto {
+    text-align: center;
+}
+
+.detalle-dato {
+    transition-property: color;
+    transition-duration: 0.2s;
+}
+
+.oculto {
+    height: 0;
+    border: 0;
+    color: white;
+    overflow: hidden;
+}
+
+#lista-contacto {
+    list-style-type: none;
+    margin-left: 0 !important;
+    padding: 0;
+}
+
+#lista-contacto i {
+    margin-right: 0.2em;
+}
+
+footer p {
+    text-align: center;
+    width: 100%;
+    color: white;
+}
